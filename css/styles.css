@@ -113,6 +113,15 @@ p {
 .link-nav {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+/* Иконки контактов */
+
+.icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .address-list {
@@ -145,7 +154,6 @@ p {
 
 .hero {
   background-color: var(--hero-color);
-
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -255,18 +263,22 @@ p {
 
 .icon-antenna::before {
   background-image: url(../images/index/antenna.svg);
+  margin-bottom: 30px;
 }
 
 .icon-clock::before {
   background-image: url(../images/index/clock.svg);
+  margin-bottom: 30px;
 }
 
 .icon-notebook::before {
   background-image: url(../images/index/notebook.svg);
+  margin-bottom: 30px;
 }
 
 .icon-astro::before {
   background-image: url(../images/index/astronaut.svg);
+  margin-bottom: 30px;
 }
 
 .title-section {
@@ -304,9 +316,6 @@ p {
 
 .section.our-work {
   padding-top: 0;
-}
-
-.our-work-box {
 }
 
 .our-work-list {
@@ -463,7 +472,6 @@ img {
 .hero.overlay {
   height: 600px;
   max-width: 1600px;
-  outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -474,5 +482,5 @@ img {
     url(../images/index/Img-overlay.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 }
