@@ -9,6 +9,7 @@
   --hover-button-color: #188ce8;
   --portfolio-button-color: #f5f4fa;
   --card-border-color: #eeeeee;
+  --social-icons: #afb1b8;
   --logo-font: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --main-font: 'Roboto', 'Arial', 'Helvetica', sans-serif;
 }
@@ -367,9 +368,41 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.18;
-  /* text-align: center; */
   letter-spacing: 0.03em;
   color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+/* Иконки социальных сетей - Наша команда */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  fill: var(--social-icons);
+}
+
+.social-icons-smm {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--hover-button-color);
+  fill: var(--white-color);
 }
 
 /* Секция наши проекты (заголовки и текст) в Portfolio pages */
