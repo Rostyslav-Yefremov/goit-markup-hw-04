@@ -10,6 +10,7 @@
   --portfolio-button-color: #f5f4fa;
   --card-border-color: #eeeeee;
   --social-icons: #afb1b8;
+  --theme-footer-icon: rgba(255, 255, 255, 0.1);
   --logo-font: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --main-font: 'Roboto', 'Arial', 'Helvetica', sans-serif;
 }
@@ -393,15 +394,15 @@ p {
   fill: var(--social-icons);
 }
 
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-color);
+}
+
 .social-icons-smm {
   width: 20px;
   height: 20px;
-}
-
-.social-icons-link:hover,
-.social-icons-link:focus {
-  background-color: var(--hover-button-color);
-  fill: var(--white-color);
 }
 
 /* Секция наши проекты (заголовки и текст) в Portfolio pages */
@@ -499,7 +500,37 @@ p {
   padding-bottom: 60px;
 }
 
-/* Overlay на секции Hero */
+.footer-address {
+  margin-right: 70px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Иконки в футере */
+
+.footer-box .text {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.social-icons-link.footer-icons {
+  background-color: var(--theme-footer-icon);
+  fill: var(--white-color);
+}
+
+.footer-icons:hover,
+.footer-icons:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-color);
+}
 
 .hero.overlay {
   height: 600px;
