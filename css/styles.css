@@ -441,14 +441,10 @@ p {
   color: var(--accent-color);
 }
 
-/* Секция наши проекты (заголовки и текст) в Portfolio pages */
+/* Секция Наши проекты в Portfolio pages */
 
 .section.portfolio {
-  padding-bottom: 0;
-}
-
-.section.portfolio-card {
-  padding-top: 0;
+  padding-bottom: 94px;
 }
 
 .card-box {
