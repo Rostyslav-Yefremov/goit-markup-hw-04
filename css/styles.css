@@ -69,6 +69,15 @@ p {
   border-bottom: 1px solid #ececec;
 }
 
+/* ПОЗИЦИОНИРОВАНИЕ */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
+/* ПОЗИЦИОНИРОВАНИЕ конец */
+
 .header-container,
 .nav-header {
   display: flex;
@@ -179,6 +188,10 @@ p {
 }
 
 /* Кнопка на секции герой*/
+
+.section.portfolio {
+  padding-top: 175px;
+}
 
 .button-portfolio {
   display: flex;
