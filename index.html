@@ -61,7 +61,16 @@
                 <h1 class="title-hero">Эффективные решения <br>для вашего
                     бизнеса
                 </h1>
-                <button type="button" class="button"> Заказать услугу </button>
+                <button class="button" data-open-modal> Заказать
+                    услугу </button>
+            </div>
+
+            <div class="backdrop is-hidden" data-backdrop>
+                <div class="modal">
+                    <p>Lorem ipsum dolor sit amet.
+                        <button data-close-modal>Закрыть</button>
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -103,12 +112,31 @@
             <div class="container our-work-box">
                 <h2 class="title-section">Чем мы занимаемся</h2>
                 <ul class="list our-work-list">
-                    <li> <img src="./images/index/1img.jpg" width="370"
-                            alt="планшет"> </li>
-                    <li> <img src="./images/index/2img.jpg" width="370"
-                            alt="ноутбук"> </li>
-                    <li> <img src="./images/index/3img.jpg" width="370"
+                    <li class="our-work-item"> <img
+                            src="./images/index/1img.jpg" width="370"
+                            alt="планшет">
+                        <div class="bg-our-work">
+                            <h3 class="title-bg-work"> Десктопные приложения
+                            </h3>
+                        </div>
+
+                    </li>
+                    <li class="our-work-item"> <img
+                            src="./images/index/2img.jpg" width="370"
+                            alt="ноутбук">
+                        <div class="bg-our-work">
+                            <h3 class="title-bg-work"> Мобильные приложения
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="our-work-item"> <img
+                            src="./images/index/3img.jpg" width="370"
                             alt="смартфон">
+                        <div class="bg-our-work">
+                            <h3 class="title-bg-work"> Дизайнерские решения
+                            </h3>
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -399,6 +427,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+
+        function logBackdropClick() {
+            console.log("Это клик в бекдроп");
+        }
+    </script>
+
 </body>
 
 </html>

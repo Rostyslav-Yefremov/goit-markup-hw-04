@@ -21,6 +21,7 @@ body {
   color: var(--title-color);
   font-family: var(--main-font);
   font-style: normal;
+  margin-top: 81px;
 }
 
 /* Применится ко всем ссылкам на странице */
@@ -74,6 +75,9 @@ p {
 .fixed {
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
+  height: 81px;
 }
 
 /* ПОЗИЦИОНИРОВАНИЕ конец */
@@ -122,7 +126,20 @@ p {
 }
 
 .link-nav.current {
+  position: relative;
   color: var(--accent-color);
+}
+
+.current::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .link-nav {
@@ -167,6 +184,8 @@ p {
   margin-bottom: 9px;
 }
 
+/* Герой */
+
 .hero {
   background-color: var(--hero-color);
   text-align: center;
@@ -187,22 +206,8 @@ p {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Кнопка на секции герой*/
+/* Кнопка и модальное окно на секции герой*/
 
-.section.portfolio {
-  padding-top: 175px;
-}
-
-.button-portfolio {
-  display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
-}
-.btn-item:not(:last-child) {
-  margin-right: 8px;
-}
-
-/* кнопка на главной странице */
 .button {
   width: 200px;
   height: 50px;
@@ -230,7 +235,41 @@ p {
   background-color: var(--hover-button-color);
 }
 
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  padding: 15px;
+  background-color: var(--white-color);
+}
+
 /* Кнопки на странице Портфолио */
+.button-portfolio {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .button-item {
   font-weight: 500;
   font-size: 16px;
@@ -349,6 +388,29 @@ p {
   /* flex-basis: calc(100% / 3); */
 }
 
+.our-work-item {
+  position: relative;
+}
+
+.title-bg-work {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  padding-top: 27px;
+}
+
+.bg-our-work {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /* Наша команда */
 
 .section.our-team {
@@ -455,10 +517,6 @@ p {
 }
 
 /* Секция Наши проекты в Portfolio pages */
-
-.section.portfolio {
-  padding-bottom: 94px;
-}
 
 .card-box {
   display: flex;
